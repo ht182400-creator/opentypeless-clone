@@ -71,7 +71,7 @@ jobs:
     runs-on: ${{ matrix.platform }}
     timeout-minutes: ${{ matrix.timeout_minutes }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.platform == 'all' || github.event.inputs.platform == matrix.platform_group }}
 
       - name: Sync version from tag
