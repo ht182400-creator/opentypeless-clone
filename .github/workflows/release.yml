@@ -190,7 +190,7 @@ jobs:
           ALLOW_UNSIGNED_WINDOWS: ${{ github.event.inputs.allow_unsigned_windows }}
         run: ./.github/scripts/import-windows-certificate.ps1
 
-      - uses: tauri-apps/tauri-action@v0
+      - uses: tauri-apps/tauri-action@v1
         if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.platform == 'all' || github.event.inputs.platform == matrix.platform_group }}
         id: tauri
         env:
